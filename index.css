@@ -1,0 +1,30 @@
+[id = 'toggle-heart']{
+    position: absolute;
+    left: -100vw;
+}
+[for = 'toggle-heart']{
+    color: #aab8c2;
+}
+[id = 'toggle-heart']:checked + label{
+    color: #e2264d;
+    will-change: font-size;
+    animation: heart 1s cubic-bezier(.17,.89,.32,1.49);
+}
+[for = 'toggle-heart']{
+    font-size: 2em;
+    cursor: pointer;
+    align-self: center;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+}
+
+@keyframes heart {
+    0%,17.5%{
+        font-size: 0;
+    }
+}

@@ -1,0 +1,49 @@
+[for='toggle-heart'] {
+  position: relative; }
+  [for='toggle-heart']:before, [for='toggle-heart']:after {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    content: ''; }
+
+[for='toggle-heart']::before {
+  margin: -2.25rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: gold; }
+
+[for='toggle-heart']:before {
+  box-sizing: border-box;
+  border: solid 2.25rem #e2264d;
+  transform: scale(0); }
+
+@keyframes bubble {
+  15% {
+    border-color: #cc8ef5;
+    border-width: 2.25rem;
+    transform: scale(1); }
+  30%,100% {
+    border-color: #cc8ef5;
+    border-width: 0;
+    transform: scale(1); } }
+@keyframes bubble {
+  15% {
+    border-color: #cc8ef5;
+    border-width: 2.25rem;
+    transform: scale(1); }
+  30%,100% {
+    border-color: #cc8ef5;
+    border-width: 0;
+    transform: scale(1); } }
+[id='toggle-heart']:checked + label::before, [id='toggle-heart']:checked + label::after {
+  animation: inherit;
+  animation-timing-function: cubic-bezier(0.21, 0.61, 0.35, 1); }
+[id='toggle-heart']:checked + label::before {
+  will-change: transform,border-color,border-width;
+  animation-name: bubble; }
+[id='toggle-heart']:checked + label::after {
+  animation-name: particles; }
+
+/*# sourceMappingURL=index02.css.map */
